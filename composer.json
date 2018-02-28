@@ -1,5 +1,5 @@
 {
-  "name": "NCMF/UserBundle",
+  "name": "ncmf/user-bundle",
   "description": "Symfony2 based CMF",
   "type": "symfony-bundle",
   "homepage": "https://github.com/NCMF/UserBundle",
@@ -21,12 +21,6 @@
   },
   "require-dev": {
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/NCMF/UserBundle.git"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "NCMF\\UserBundle\\": ""
