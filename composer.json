@@ -29,7 +29,7 @@
   "target-dir": "",
   "extra": {
     "branch-alias": {
-      "dev-master": "0.0.1"
+      "dev-master": "0.0.1-dev"
     }
   }
 }
