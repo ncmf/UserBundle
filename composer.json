@@ -1,0 +1,41 @@
+{
+  "name": "NCMF/UserBundle",
+  "description": "Symfony2 based CMF",
+  "type": "symfony-bundle",
+  "homepage": "https://github.com/NCMF/UserBundle",
+  "license": "MIT",
+  "keywords": [
+    "cmf",
+    "cmf bundle"
+  ],
+  "authors": [
+    {
+      "name": "Alexander Averichev",
+      "email": "averichev@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "symfony/framework-bundle": "^2.7 || ^3.0",
+    "friendsofsymfony/user-bundle": "^2.0"
+  },
+  "require-dev": {
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/NCMF/UserBundle.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "NCMF\\UserBundle\\": ""
+    }
+  },
+  "target-dir": "",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.1"
+    }
+  }
+}
