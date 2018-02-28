@@ -1,6 +1,6 @@
 {
   "name": "ncmf/user-bundle",
-  "description": "Symfony2 based CMF",
+  "description": "Extension for FOSUserBundle",
   "type": "symfony-bundle",
   "homepage": "https://github.com/NCMF/UserBundle",
   "license": "MIT",
