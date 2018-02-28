@@ -5,8 +5,10 @@
   "homepage": "https://github.com/NCMF/UserBundle",
   "license": "MIT",
   "keywords": [
-    "cmf",
-    "cmf bundle"
+    "symfony",
+    "user-bundle",
+    "User management",
+    "FOSUserBundle"
   ],
   "authors": [
     {
