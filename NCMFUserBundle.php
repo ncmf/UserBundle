@@ -4,7 +4,7 @@ namespace NCMF\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class NCMFSiteBundle extends Bundle
+class NCMFUserBundle extends Bundle
 {
     public function getParent()
     {

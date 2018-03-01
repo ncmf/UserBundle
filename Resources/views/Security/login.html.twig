@@ -1,0 +1,100 @@
+{% extends "@NCMFUser/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+
+    <div class="text-center">
+        <form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
+            {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+            {% endif %}
+            <i class="far fa-user fa-5x mb-4"></i>
+            <h1 class="h3 mb-3 font-weight-normal">{{ 'security.authorization'|trans({}, 'NCMFUserBundle') }}</h1>
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <label for="username" class="sr-only">{{ 'security.login.username'|trans }}</label>
+            <input class="form-control" id="username" name="_username"
+                   placeholder="{{ 'security.login.username'|trans }}"
+                   value="{{ last_username }}"
+                   required autofocus>
+
+            <label for="inputPassword" class="sr-only">{{ 'security.login.password'|trans }}</label>
+            <input class="form-control" placeholder="{{ 'security.login.password'|trans }}"
+                   type="password" id="password"
+                   name="_password"
+                   required>
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" id="remember_me" name="_remember_me"
+                           value="on"/>
+                    {{ 'security.login.remember_me'|trans }}
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="_submit"
+                    name="_submit">{{ 'security.login.submit'|trans }}</button>
+            <p class="mt-5 mb-3 text-muted">&copy; {{ 'now'|date('Y') }}</p>
+        </form>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: flex;
+            -ms-flex-align: center;
+            -ms-flex-pack: center;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        .form-signin .checkbox {
+            font-weight: 400;
+        }
+
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
+{% endblock %}
