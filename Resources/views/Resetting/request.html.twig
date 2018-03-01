@@ -1,0 +1,30 @@
+{% extends "@NCMFUser/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+
+
+    <div class="text-center">
+        <form action="{{ path("fos_user_resetting_send_email") }}" method="post" class="form-signin">
+            <i class="fas fa-question-circle fa-5x mb-4"></i>
+            <h1 class="h3 mb-3 font-weight-normal">Сброс пароля</h1>
+
+            <label for="username" class="sr-only">{{ 'resetting.request.username'|trans }}</label>
+            <input class="form-control" id="username" name="username"
+                   placeholder="{{ 'security.login.username'|trans }}"
+                   required autofocus>
+
+            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" id="_submit"
+                    name="_submit">{{ 'resetting.request.submit'|trans }}</button>
+            <div class="text-center mt-3">
+                <small><a href="{{ path('fos_user_security_login') }}">Вспомнили пароль?</a></small>
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% include "@NCMFUser/Security/styles.html.twig" %}
+{% endblock %}

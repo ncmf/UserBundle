@@ -1,0 +1,17 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="card text-center">
+    <div class="card-header">
+        Данные пользователя
+    </div>
+    <div class="card-block">
+        <dl class="row">
+            <dt class="col-sm-6">{{ 'profile.show.username'|trans }}</dt>
+            <dd class="col-sm-3">{{ user.username }}</dd>
+            <dt class="col-sm-6">{{ 'profile.show.email'|trans }}</dt>
+            <dd class="col-sm-3">{{ user.email }}</dd>
+        </dl>
+    </div>
+</div>
+
+

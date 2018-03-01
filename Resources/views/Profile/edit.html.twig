@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-9">
+            {% block profile_content %}
+                {% include "@NCMFUser/Profile/edit_content.html.twig" %}
+            {% endblock %}
+        </div>
+        <div class="col-md-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Профиль</a>
+                <a class="nav-link active" href="{{ path('fos_user_profile_edit') }}"><i class="fas fa-cogs"></i> Редактировать</a>
+                <a class="nav-link" href="{{ path('fos_user_security_logout') }}"><i class="fas fa-sign-out-alt"></i> Выйти</a>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+           crossorigin="anonymous">
+ {% endblock %}
+{% block javascripts %}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+{% endblock %}

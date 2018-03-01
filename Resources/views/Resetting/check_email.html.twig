@@ -1,0 +1,21 @@
+{% extends "@NCMFUser/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+
+    <div class="text-center">
+        <div class="form-signin">
+            <i class="far fa-paper-plane fa-5x mb-4"></i>
+            <h1 class="h3 mb-3 font-weight-normal">Проверьте почту</h1>
+
+            <p>{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}</p>
+            <a class="btn btn-lg btn-primary btn-block" href="{{ path('fos_user_security_login') }}"
+                    name="_submit">{{ 'security.login.submit'|trans }}</a>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% include "@NCMFUser/Security/styles.html.twig" %}
+{% endblock %}
