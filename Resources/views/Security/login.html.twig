@@ -36,10 +36,10 @@
                     name="_submit">{{ 'security.login.submit'|trans }}</button>
             <div class="row mt-3">
                 <div class="col-md-6 text-left">
-                    <small><a href="{{ path('fos_user_resetting_request') }}">Забыли пароль?</a></small>
+                    <small><a href="{{ path('fos_user_registration_register') }}">Регистрация</a></small>
                 </div>
                 <div class="col-md-6 text-right">
-                    <small><a href="{{ path('fos_user_registration_register') }}">Регистрация</a></small>
+                    <small><a href="{{ path('fos_user_resetting_request') }}">Забыли пароль?</a></small>
                 </div>
             </div>
             <p class="mt-5 mb-3 text-muted">&copy; {{ 'now'|date('Y') }}</p>
