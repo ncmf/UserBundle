@@ -1,6 +1,8 @@
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
+    service:                               # this lines
+        mailer: fos_user.mailer.twig_swift # this lines
     user_class: NCMF\UserBundle\Entity\User
     from_email:
         address: "robot@example.com"
