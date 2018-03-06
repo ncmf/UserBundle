@@ -1,6 +1,11 @@
 services:
-    app.form.registration:
+    ncmf.user_bundle.form.registration:
         class: NCMF\UserBundle\Form\Type\RegistrationFormType
         arguments: ['@doctrine.orm.entity_manager', '%secret%']
         tags:
             - { name: form.type, alias: app_user_registration }
+    ncmf.user_bundle.registration_completed_listener:
+        class: NCMF\UserBundle\EventListener\RegistrationCompletedListener
+        arguments: ['@doctrine.orm.entity_manager', '%secret%', '@fos_user.user_manager.default']
+        tags:
+            - { name: kernel.event_subscriber }

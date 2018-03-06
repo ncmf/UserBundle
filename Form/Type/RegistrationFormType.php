@@ -21,7 +21,6 @@ class RegistrationFormType extends AbstractType
         $this->secret = $secret;
     }
 
-
     /**
      * {@inheritdoc}
      */

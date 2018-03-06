@@ -1,28 +1,19 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends "@NCMFUser/layout.html.twig" %}
 
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% block fos_user_content %}
+{% block body %}
 
-
-
-    <div class="row mt-5">
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-5">
-            <div class="card text-center">
-                <div class="card-block">
-                    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-                    {% if targetUrl %}
-                        <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-                    {% endif %}
-                    <p><a href="{{ path('ncmf_homepage') }}">На главную</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-        </div>
+    <div class="text-center">
+        <i class="fas fa-user fa-5x mb-4"></i>
+        <h1 class="h3 mb-3 font-weight-normal">Поздравляем!</h1>
+        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        <p><a href="/">На главную</a></p>
     </div>
 
 
-{% endblock fos_user_content %}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% include "@NCMFUser/Security/styles.html.twig" %}
+{% endblock %}
