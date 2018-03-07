@@ -1,3 +1,5 @@
+imports:
+    - { resource: "@NCMFUserBundle/Resources/config/services.yml" }
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
