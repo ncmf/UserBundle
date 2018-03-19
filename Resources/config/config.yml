@@ -12,3 +12,5 @@ fos_user:
     registration:
         form:
             type: NCMF\UserBundle\Form\Type\RegistrationFormType
+framework:
+    translator: { fallbacks: ['%locale%'] }
