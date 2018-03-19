@@ -29,7 +29,7 @@ class RegistrationFormType extends AbstractType
         $userCount = $this->entityManager
             ->createQuery('SELECT COUNT(n.id) FROM NCMFUserBundle:User n')
             ->getSingleScalarResult();
-        if ($userCount === 0) {
+        if (!$userCount) {
             $builder->add('check', PasswordType::class, array(
                 'label' => 'Секретный ключ',
                 'attr' => array(
