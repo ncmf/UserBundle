@@ -1,4 +1,5 @@
 security:
+    always_authenticate_before_granting:  true
     encoders:
         FOS\UserBundle\Model\UserInterface: bcrypt
 

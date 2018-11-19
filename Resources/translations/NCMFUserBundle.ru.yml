@@ -1,2 +1,7 @@
 security:
     authorization: 'Авторизация'
+form:
+    username: "Логин"
+security:
+    login:
+        username: "Логин"
