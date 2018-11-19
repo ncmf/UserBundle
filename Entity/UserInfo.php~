@@ -1,0 +1,26 @@
+<?php
+
+namespace NCMF\UserBundle\Entity;
+
+/**
+ * UserInfo
+ */
+class UserInfo
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
+

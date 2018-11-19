@@ -1,0 +1,50 @@
+NCMF\UserBundle\Entity\UserInfo:
+    type: mappedSuperclass
+    table: null
+    repositoryClass: NCMF\UserBundle\Repository\UserInfoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        secondName:
+            type: string
+            length: 255
+            column: second_name
+        lastName:
+            type: string
+            length: 255
+            column: last_name
+        company:
+            type: string
+            length: 255
+        city:
+            type: string
+            length: 255
+        taxNumber:
+            type: bigint
+            unique: true
+            column: tax_number
+        phone:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+            nullable: true
+        discount:
+            type: smallint
+            nullable: true
+    oneToOne:
+        user:
+            targetEntity: User
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+            inversedBy: userInfo
+    lifecycleCallbacks: {  }
