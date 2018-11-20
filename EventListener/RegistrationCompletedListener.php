@@ -37,7 +37,7 @@ class RegistrationCompletedListener implements EventSubscriberInterface
             $userCount = $this->entityManager
                 ->createQuery('SELECT COUNT(n.id) FROM NCMFUserBundle:User n')
                 ->getSingleScalarResult();
-            if ($userCount === 0) {
+            if (intval($userCount) === 1) {
                 $user = $event->getUser();
                 $user->addRole('ROLE_SUPER_ADMIN');
                 $this->userManager->updateUser($user);
