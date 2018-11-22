@@ -6,8 +6,4 @@ NCMF\UserBundle\Entity\User:
             type: integer
             generator:
                 strategy: AUTO
-    oneToOne:
-        userInfo:
-            targetEntity: UserInfo
-            mappedBy: user
     lifecycleCallbacks: {  }

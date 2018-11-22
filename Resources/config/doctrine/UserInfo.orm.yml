@@ -46,5 +46,4 @@ NCMF\UserBundle\Entity\UserInfo:
             joinColumn:
                 name: user_id
                 referencedColumnName: id
-            inversedBy: userInfo
     lifecycleCallbacks: {  }
