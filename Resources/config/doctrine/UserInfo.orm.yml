@@ -51,6 +51,7 @@ NCMF\UserBundle\Entity\UserInfo:
         user:
             targetEntity: User
             joinColumn:
+                nullable: false
                 name: user_id
                 referencedColumnName: id
     lifecycleCallbacks: {  }
