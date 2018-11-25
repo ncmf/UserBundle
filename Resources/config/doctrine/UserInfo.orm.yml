@@ -12,27 +12,34 @@ NCMF\UserBundle\Entity\UserInfo:
         name:
             type: string
             length: 255
+            nullable: false
         secondName:
             type: string
             length: 255
             column: second_name
+            nullable: true
         lastName:
             type: string
             length: 255
             column: last_name
+            nullable: true
         company:
             type: string
             length: 255
+            nullable: true
         city:
             type: string
             length: 255
+            nullable: true
         taxNumber:
             type: bigint
             unique: true
             column: tax_number
+            nullable: true
         phone:
             type: string
             length: 255
+            nullable: true
         email:
             type: string
             length: 255
