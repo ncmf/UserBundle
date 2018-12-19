@@ -32,3 +32,8 @@ php composer.phar require ncmf/user-bundle:dev-master
                 ...
                 new FOS\UserBundle\FOSUserBundle(),
                 new NCMF\UserBundle\NCMFUserBundle(),
+
+### Run commands
+    composer dump-autoload --optimize
+    php bin/console doctrine:schema:validate
+    php bin/console doctrine:schema:update --force
