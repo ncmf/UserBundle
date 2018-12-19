@@ -28,10 +28,11 @@ php composer.phar require ncmf/user-bundle:dev-master
         resource: "@NCMFUserBundle/Resources/config/routing.yml"
 
 ### Add bundles to app/AppKernel.php
+    ...
             $bundles = [
                 ...
-                new FOS\UserBundle\FOSUserBundle(),
-                new NCMF\UserBundle\NCMFUserBundle(),
+                new FOS\UserBundle\FOSUserBundle(), // Added this line
+                new NCMF\UserBundle\NCMFUserBundle(), // Added this line
 
 ### Run commands
     composer dump-autoload --optimize
