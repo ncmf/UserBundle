@@ -26,3 +26,9 @@ php composer.phar require ncmf/user-bundle:dev-master
 
     ncmf_user_bundle:
         resource: "@NCMFUserBundle/Resources/config/routing.yml"
+
+### Add bundles to app/AppKernel.php
+            $bundles = [
+                ...
+                new FOS\UserBundle\FOSUserBundle(),
+                new NCMF\UserBundle\NCMFUserBundle(),
