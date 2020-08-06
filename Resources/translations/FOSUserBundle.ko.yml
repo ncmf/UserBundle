@@ -1,0 +1,85 @@
+group:
+    edit:
+        submit: '업데이트 그룹'
+    show:
+        name: '그룹 이름'
+    new:
+        submit: '그룹을 생성'
+    flash:
+        updated: '그룹이 업데이트되었습니다'
+        created: '그룹 생성'
+        deleted: '그룹이 삭제'
+security:
+    authorization: "권한 부여"
+    login:
+        username: '사용자 이름'
+        password: '암호'
+        remember_me: '저를 기억'
+        submit: '입력'
+profile:
+    show:
+        username: '사용자 이름'
+        email: '이메일'
+    edit:
+        submit: '갱신'
+    flash:
+        updated: '업데이트 프로필'
+change_password:
+    submit: '암호 변경'
+    flash:
+        success: '암호가 변경'
+
+registration:
+    check_email: '이메일은 %email% 보내졌다 그것은 당신이 당신의 등록을 확인 할 수있는 링크가 포함되어'
+    confirmed: '%username% 축하 계정이 확인되었습니다'
+    back: '이전 페이지로 돌아 가기'
+    submit: '올라'
+    flash:
+        user_created: '사용자가 성공적으로 생성'
+    email:
+        subject: '환영 %username%!'
+        message: |
+            환영, %username%!
+
+            등록을 확인하기 위해 여기를 클릭하십시오 %confirmationUrl%
+
+            이 링크는 귀하의 계정을 확인하기 위해 한 번만 사용할 수 있습니다.
+
+            최고의 소원, 사이트 팀.
+
+resetting:
+    check_email: |
+        편지가 전송됩니다. 그것은 당신이 당신의 암호를 재설정 할 클릭 링크가 포함되어 있습니다. 참고 만 %tokenLifetime%시간 후 새 비밀번호를 요청할 수있을 것입니다.
+
+        당신은 이메일을받지 못한 경우 스팸 폴더를 확인하거나 다시 시도하십시오.
+
+    request:
+        username: '아이디 또는 이메일'
+        submit: '암호 재설정'
+    reset:
+        submit: '암호 변경'
+    flash:
+        success: '비밀번호가 성공적으로 재설정'
+    email:
+        subject: '암호 재설정'
+        message: |
+            환영, %username%!
+
+            비밀번호를 재설정, 여기를 클릭하십시오 %confirmationUrl%
+
+            최고의 소원, 사이트 팀.
+
+layout:
+    logout: 산출
+    login: 기입
+    register: 등록
+    logged_in_as: '당신은로 로그인 %username%'
+form:
+    group_name: '그룹 이름'
+    username: '사용자 이름'
+    email: '이메일'
+    current_password: '현재 암호'
+    password: 암호
+    password_confirmation: '비밀번호 확인'
+    new_password: '새 비밀번호'
+    new_password_confirmation: '비밀번호 확인'
